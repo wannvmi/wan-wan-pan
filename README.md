@@ -1,4 +1,4 @@
-# Vite Electron Builder Boilerplate v2
+# Vite Electron Builder Boilerplate
 
 [![GitHub issues by-label](https://img.shields.io/github/issues/cawa-93/vite-electron-builder/help%20wanted?label=issues%20need%20help&logo=github)](https://github.com/cawa-93/vite-electron-builder/issues?q=label%3A%22help+wanted%22+is%3Aopen+is%3Aissue)
 [![Required Node.JS >= v16.13](https://img.shields.io/static/v1?label=node&message=%3E=16.13&logo=node.js&color)](https://nodejs.org/about/releases/)
@@ -41,13 +41,14 @@ That's all you need. 😉
 
 ### Electron [![Electron version](https://img.shields.io/github/package-json/dependency-version/cawa-93/vite-electron-builder/dev/electron?label=%20)][electron]
 - Template use the latest electron version with all the latest security patches.
-- The architecture of the application is built according to the security [guids](https://www.electronjs.org/docs/tutorial/security) and best practices.
+- The architecture of the application is built according to the security [guides](https://www.electronjs.org/docs/tutorial/security) and best practices.
 - The latest version of the [electron-builder] is used to compile the application.
 
 
 ### Vite [![Vite version](https://img.shields.io/github/package-json/dependency-version/cawa-93/vite-electron-builder/dev/vite?label=%20)][vite]
 - [Vite] is used to bundle all source codes. This is an extremely fast packer that has a bunch of great features. You can learn more about how it is arranged in [this](https://youtu.be/xXrhg26VCSc) video.
 - Vite [supports](https://vitejs.dev/guide/env-and-mode.html) reading `.env` files. You can also specify types of your environment variables in [`types/vite-env.d.ts`](types/vite-env.d.ts).
+- Hot reloads for `Main` and `Renderer` processes.
 
 Vite provides you with many useful features, such as: `TypeScript`, `TSX/JSX`, `CSS/JSON Importing`, `CSS Modules`, `Web Assembly` and much more.
 
@@ -58,6 +59,8 @@ Vite provides you with many useful features, such as: `TypeScript`, `TSX/JSX`, `
 - The Latest TypeScript is used for all source code. 
 - **Vite** supports TypeScript out of the box. However, it does not support type checking.
 - Code formatting rules follow the latest TypeScript recommendations and best practices thanks to [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
+- Automatically create interface declarations for all APIs that have been passed to `electron.contextBridge.exposeInMainWorld`.
+  Thanks [dts-for-context-bridge](https://github.com/cawa-93/dts-for-context-bridge)  [![dts-for-context-bridge version](https://img.shields.io/github/package-json/dependency-version/cawa-93/vite-electron-builder/dev/dts-for-context-bridge?label=%20)](https://github.com/cawa-93/dts-for-context-bridge).
 
 **[See this discussion](https://github.com/cawa-93/vite-electron-builder/discussions/339)** if you want completly remove TypeScript. 
 
