@@ -1,8 +1,8 @@
-declare enum WinEvent {
-  WinMinimize,
-  WinMaximize,
-  WinUnMaximize,
-  WinRestore,
-  WinClose,
-  WinIsMaximized,
+declare enum IpcChannel {
+  WinMinimize = 'WinMinimize',
+  WinMaximize = 'WinMaximize',
+  WinUnMaximize = 'WinUnMaximize',
+  WinRestore = 'WinRestore',
+  WinClose = 'WinClose',
+  WinIsMaximized = 'WinIsMaximized',
 }
